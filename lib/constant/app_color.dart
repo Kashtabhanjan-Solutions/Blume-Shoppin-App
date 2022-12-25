@@ -13,9 +13,10 @@ class AppColor{
 
 
 
-  /// TEXTCOLOR
+  static Color appBarColor = const Color(0xff1A1E22);
 
-  static Color dividerColor = Color(0xffF7F7F7);
+  /// DIVIDER COLOR
+  static Color dividerColor = const Color(0xffF7F7F7);
 
   /// INTRO SCREEN COLOR
   static Color introScreenTextColor = Colors.white;

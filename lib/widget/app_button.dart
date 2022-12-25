@@ -1,17 +1,28 @@
+import 'package:blume_shopping_app/theme/text_style.dart';
 import 'package:flutter/material.dart';
-
-import '../constant/app_color.dart';
+import 'package:get/get.dart';
 
 class AppButton extends StatelessWidget {
-  const AppButton({Key? key}) : super(key: key);
+  String text;
+  VoidCallback onTap;
+
+   AppButton({Key? key,required this.text,required this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primaryContainer
-      ),
+    return InkWell(
+      onTap: onTap,
+        borderRadius: BorderRadius.circular(30),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 20),
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: context.theme.buttonColor,
+          borderRadius: BorderRadius.circular(30)
+        ),
+        child: Center(child: Text(text , style: AppTextStyle.buttonStyle)),
+      ).paddingSymmetric(horizontal: 27),
     );
   }
 }
+

@@ -42,7 +42,7 @@ dependencies:
   get: ^4.6.5
 
   # for font
-  google_fonts: ^3.0.1
+ # google_fonts:
 
 dev_dependencies:
   flutter_test:
