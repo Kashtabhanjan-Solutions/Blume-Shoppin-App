@@ -9,6 +9,7 @@ import '../../utils/extension.dart';
 import '../../widget/app_button.dart';
 import '../../widget/app_divider.dart';
 import '../login_screens/login_screen.dart';
+import '../sign_up_email_screens/sign_up_email_screen.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -56,7 +57,9 @@ class IntroScreen extends StatelessWidget {
               height: size/20,
             ),
 
-            AppButton(text: "SIGN UP WITH EMAIL",onTap: (){}),
+            AppButton(text: "SIGN UP WITH EMAIL",onTap: (){
+              Get.to(const SignUpEmailScreen());
+            }),
 
           ],
         ),
