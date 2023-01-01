@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../constant/app_color.dart';
+import '../../constant/app_icon.dart';
 import '../../constant/app_text.dart';
 import '../../theme/text_style.dart';
 import '../../widget/app_textfield.dart';
@@ -30,22 +31,12 @@ class LoginScreen extends StatelessWidget {
                     onTap: (){
                       Get.back();
                     },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        const Icon(Icons.arrow_back_ios_outlined,
-                            color: Colors.white, size: 15),
-                        Text(
-                          AppConstText.backText,
-                          style: smallText(context),
-                        ),
-                      ],
-                    ).paddingOnly(left: 10).marginOnly(top: 40),
+                    child:  AppIcon.backTextIcon(context,color: Colors.white).paddingOnly(left: 10).marginOnly(top: 40),
                   ),
 
                   Text(
                     AppConstText.loginINYAccount,
-                    style: AppTextStyle.largeTextStyle,
+                    style: const TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),
                   ).paddingOnly(left: 20).marginOnly(top: 40),
 
 

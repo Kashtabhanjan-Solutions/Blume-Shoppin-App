@@ -1,3 +1,4 @@
+import 'package:blume_shopping_app/constant/app_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,7 +8,7 @@ import '../../theme/text_style.dart';
 import '../../utils/extension.dart';
 import '../../widget/app_button.dart';
 import '../../widget/app_divider.dart';
-import '../login_screen/login_screen.dart';
+import '../login_screens/login_screen.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -34,15 +35,9 @@ class IntroScreen extends StatelessWidget {
 
             InkWell(
               onTap: (){
-                Get.to(LoginScreen());
+                Get.to(const LoginScreen());
               },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(AppConstText.signINText,style: smallText(context),),
-                  const Icon(Icons.arrow_forward_ios_outlined, color: Colors.white, size: 15)
-                ],
-              ).paddingOnly(right: 10).marginOnly(top: 30),
+              child: AppIcon.forwardTextIcon(context,color: Colors.white).paddingOnly(right: 10).marginOnly(top: 30),
             ),
 
             Container(
@@ -50,7 +45,7 @@ class IntroScreen extends StatelessWidget {
             ),
         //    const Spacer(flex: 2),
 
-            Text(AppConstText.introScreenText,style: AppTextStyle.largeTextStyle,).marginSymmetric(horizontal: 30),
+            Text(AppConstText.introScreenText,style: const TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30),).marginSymmetric(horizontal: 30),
             Container(
               height: size/50,
             ),

@@ -22,4 +22,7 @@ class AppColor{
   static Color introScreenTextColor = Colors.white;
 
 
+  static Color textLightColor = Color(0xff9D9B9B);
+
+
 }

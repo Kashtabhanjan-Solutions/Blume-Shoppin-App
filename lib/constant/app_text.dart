@@ -4,4 +4,5 @@ class AppConstText {
   static String backText = "BACK";
   static String loginINYAccount = "Log into\nyour account";
   static String forGetPassWord = "Forget Password ?";
+  static String updateYourPassword = "Update your password";
 }

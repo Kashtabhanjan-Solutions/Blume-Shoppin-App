@@ -20,7 +20,7 @@ class AppButton extends StatelessWidget {
           color: context.theme.buttonColor,
           borderRadius: BorderRadius.circular(30)
         ),
-        child: Center(child: Text(text , style: AppTextStyle.buttonStyle)),
+        child: Center(child: Text(text , style: AppTextStyle.buttonStyle(context))),
       ).paddingSymmetric(horizontal: 27),
     );
   }
