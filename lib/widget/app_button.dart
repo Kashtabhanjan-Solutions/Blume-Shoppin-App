@@ -12,6 +12,7 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
+        splashColor: Colors.transparent,
         borderRadius: BorderRadius.circular(30),
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 20),

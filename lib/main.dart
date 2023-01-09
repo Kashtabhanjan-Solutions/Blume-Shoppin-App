@@ -1,5 +1,5 @@
-import 'package:blume_shopping_app/screen/forget_password_screens/forget_password_screen.dart';
-import 'package:blume_shopping_app/screen/intro_screens/intro_screen.dart';
+
+import 'package:blume_shopping_app/screens/intro_screens/intro_screen.dart';
 import 'package:blume_shopping_app/theme/theme_services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

@@ -8,6 +8,7 @@ import '../../constant/app_icon.dart';
 import '../../constant/app_text.dart';
 import '../../theme/text_style.dart';
 import '../../widget/app_textfield.dart';
+import '../start_shopping_screens/start_shopping_screen.dart';
 
 class UpdatePassWordScreen extends StatelessWidget {
   const UpdatePassWordScreen({Key? key}) : super(key: key);
@@ -38,9 +39,9 @@ class UpdatePassWordScreen extends StatelessWidget {
               style: AppTextStyle.smallText(context,color : AppColor.textLightColor),
             ).marginOnly(top: 40,right: 30,left: 30),
 
-            Container(
-              height: size/20,
-            ),
+              Container(
+                height: size/20,
+              ),
             AppTextField(labelText: "Password",).marginOnly(top: 40,right: 30,left: 30),
 
             AppTextField(labelText: "Confirm Password",).marginOnly(top: 20,right: 30,left: 30),
@@ -49,7 +50,9 @@ class UpdatePassWordScreen extends StatelessWidget {
               height: size/40,
             ),
 
-            AppButton(text: "RESET PASSWORD", onTap: (){})
+            AppButton(text: "RESET PASSWORD", onTap: (){
+              Get.to(const StartShoppingScreen());
+            })
 
           ],
         ),
