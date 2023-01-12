@@ -10,10 +10,10 @@ class AppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: onTap,
-        splashColor: Colors.transparent,
-        borderRadius: BorderRadius.circular(30),
+        // splashColor: Colors.transparent,
+        // borderRadius: BorderRadius.circular(30),
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 20),
         width: double.infinity,

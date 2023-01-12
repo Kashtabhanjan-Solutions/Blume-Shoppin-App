@@ -6,9 +6,9 @@ class Themes{
 
   static final light = ThemeData.dark().copyWith(
     brightness: Brightness.light,
-    backgroundColor: AppColor.appLightThemeColor,
-    buttonColor: AppColor.appDarkThemeColor,
-    bottomAppBarColor: AppColor.appLightThemeBottomAppBarColor,
+    backgroundColor: Colors.white,
+    buttonColor: const Color(0xff242529),
+    bottomAppBarColor: Colors.white,
     colorScheme: ThemeData().colorScheme.copyWith(primary:const Color(0xff17181A)),
     cardColor: const Color(0xff242529), /// APP BOTTOMNAVIGATION COLOR SET
     textTheme: const TextTheme(
@@ -19,9 +19,9 @@ class Themes{
 
   static final dark = ThemeData.light().copyWith(
     brightness: Brightness.dark,
-    backgroundColor: AppColor.appDarkThemeColor,
-    buttonColor: AppColor.appDarkThemeButtonColor,
-    bottomAppBarColor: AppColor.appDarkThemeBottomAppBarColor,
+    backgroundColor: const Color(0xff242529),
+    buttonColor: const Color(0xff2F3541),
+    bottomAppBarColor: const Color(0xff2F3541),
     colorScheme: ThemeData().colorScheme.copyWith(primary:  const Color(0xff17181A)),
     cardColor: const Color(0xffFFFFFF), /// APP BOTTOMNAVIGATION COLOR SET
     textTheme: const TextTheme(

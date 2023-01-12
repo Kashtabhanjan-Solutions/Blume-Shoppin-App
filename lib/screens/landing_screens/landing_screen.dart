@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../home_pages/home_screen.dart';
 import 'landing_screen_controller.dart';
 
 class LandingPage extends StatelessWidget {
@@ -78,19 +79,19 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final LandingScreenController landingPageController =
     Get.put(LandingScreenController(), permanent: false);
-    return SafeArea(
-        child: Scaffold(
-          bottomNavigationBar:
-          buildBottomNavigationMenu(context, landingPageController),
-          body: Obx(() => IndexedStack(
-            index: landingPageController.tabIndex.value,
-            children: [
-              // HomePage(),
-              // ExplorePage(),
-              // PlacesPage(),
-              // SettingsPage(),
-            ],
-          )),
-        ));
+    return Scaffold(
+      backgroundColor: context.theme.backgroundColor,
+      bottomNavigationBar: buildBottomNavigationMenu(context, landingPageController),
+      body: Obx(() => IndexedStack(
+        index: landingPageController.tabIndex.value,
+        children: const [
+          HomeScreen(),
+          HomeScreen(),
+          HomeScreen(),
+          HomeScreen(),
+          HomeScreen(),
+        ],
+      )),
+    );
   }
 }

@@ -42,7 +42,10 @@ dependencies:
   get: ^4.6.5
 
   flutter_svg: ^1.1.6
+  lottie: ^2.2.0
 
+  # STORAGE
+  get_storage: ^2.0.3
   # for font
  # google_fonts:
 
@@ -72,6 +75,7 @@ flutter:
   assets:
     - assets/image/
     - assets/icons/
+    - assets/lottie/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

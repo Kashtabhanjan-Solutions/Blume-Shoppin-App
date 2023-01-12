@@ -1,12 +1,15 @@
-
+import 'package:blume_shopping_app/utils/theme_services.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:blume_shopping_app/screens/intro_screens/intro_screen.dart';
-import 'package:blume_shopping_app/theme/theme_services.dart';
+import 'package:blume_shopping_app/screens/landing_screens/landing_screen.dart';
+import 'package:blume_shopping_app/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-void main() {
-  runApp( MyApp());
+void main() async {
+  await GetStorage.init();
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -19,8 +22,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
      theme: Themes.light,
       darkTheme: Themes.dark,
-      themeMode: ThemeMode.dark,
-      home: const IntroScreen(),
+      themeMode:ThemeService().theme,
+      home:  IntroScreen(),
     );
   }
 }

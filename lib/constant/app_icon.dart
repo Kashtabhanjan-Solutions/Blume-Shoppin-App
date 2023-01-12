@@ -37,6 +37,11 @@ class AppIcon{
   }
 
 
+  /// SCREEN SCREEN ICON
+  static Widget searchIcon(BuildContext context){
+    return SvgPicture.asset(AppAssets.searchIcon,color: context.theme.backgroundColor,width: 20,height: 20,);
+  }
+
   /// HOME SCREEN BOTTOM NAVIGATION ICON
   static Widget homeIcon({Color? color}){
     return SvgPicture.asset(AppAssets.homeIcon,color: color,width: 15,height: 15,);
